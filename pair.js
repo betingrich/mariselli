@@ -87,7 +87,7 @@ router.get('/', async (req, res) => {
 
                     // Send confirmation message
                     await Um4r719.sendMessage(userJid, { 
-                        text: '*Hey Dear*\n\n*Don’t Share Your Session ID With Anyone*\n\n*This IS AWAIS MD*\n\n*THANKS FOR USING AWAIS MD BOT*\n\n*CONNECT FOR UPDATES*: https://whatsapp.com/channel/0029VashGieHAdNP11OHXH3P\n\n*Follow Dev On Instagram*: https://instagram.com/um4rxd\n' 
+                        text: '*Hello There` \n\n`Use This Code to Deploy Your Bot Or Share With Your Deployer To Connect Your Bot.`\n\n`When Deploying, Paste the Session on Config Var`\n\n`Thanks For Choosing Mercedes`\n\n `Support By Joining other Followers:-https://whatsapp.com/channel/0029Vajvy2kEwEjwAKP4SI0x` \n' 
                     });
 
                     // Clean up session after use
