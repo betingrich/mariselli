@@ -87,7 +87,7 @@ router.get('/', async (req, res) => {
 
                     // Send confirmation message
                     await Um4r719.sendMessage(userJid, { 
-                        text: '*Hello There` \n\n`Use This Code to Deploy Your Bot Or Share With Your Deployer To Connect Your Bot.`\n\n`When Deploying, Paste the Session on Config Var`\n\n`Thanks For Choosing Mercedes`\n\n `Support By Joining other Followers:-https://whatsapp.com/channel/0029Vajvy2kEwEjwAKP4SI0x` \n' 
+                        text: '*Hello There` \n\n*Use This Code to Deploy Your Bot Or Share With Your Deployer To Connect Your Bot.*\n\n*When Deploying, Paste the Session on Config Var*\n\n*Thanks For Choosing This Bot*\n\n*Support By Joining other Followers:-https://whatsapp.com/channel/0029VajJoCoLI8YePbpsnE3q*\n\n> *Marisel Coded This* \n' 
                     });
 
                     // Clean up session after use
