@@ -27,77 +27,52 @@
     }
 
     .btn {
-      --color: white;
       width: 260px;
       padding: 1em 2em;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: white; /* White button */
       border: none;
       position: relative;
       cursor: pointer;
-      font-weight: 300;
+      font-weight: 600;
       font-size: 17px;
       font-family: 'Roboto', 'Segoe UI', sans-serif;
       text-transform: uppercase;
-      color: var(--color);
+      color: black; /* Black text */
       margin-bottom: 24px;
+      border-radius: 25px; /* Rounded shape */
       transition: all 0.4s ease;
     }
 
     .btn::before {
       content: '';
       position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      border-radius: 30px;
       background: linear-gradient(
         45deg,
-        #ff0000,
-        #ff7300,
-        #fffb00,
-        #48ff00,
-        #00ffd5,
-        #002bff,
-        #7a00ff,
-        #ff00c8,
-        #ff0000
+        #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5,
+        #002bff, #7a00ff, #ff00c8, #ff0000
       );
       background-size: 400%;
+      animation: neon-border 60s linear infinite; /* Slow color transition */
       z-index: -1;
-      animation: rainbow-border 20s linear infinite;
     }
 
-    .btn::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        45deg,
-        transparent 20%,
-        rgba(255, 215, 0, 0.1) 50%,
-        transparent 80%
-      );
-      opacity: 0;
-      transition: opacity 0.4s ease;
+    @keyframes neon-border {
+      0% { background-position: 0 0; }
+      100% { background-position: 400% 0; }
     }
 
     .btn:hover {
-      background-color: rgba(15, 15, 15, 0.6);
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-    }
-
-    .btn:hover::after {
-      opacity: 1;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
     }
 
     .btn:active {
       transform: scale(0.98);
-      background-color: rgba(255, 215, 0, 0.1);
-    }
-
-    @keyframes rainbow-border {
-      0% { background-position: 0 0; }
-      100% { background-position: 400% 0; }
     }
   </style>
 </head>
