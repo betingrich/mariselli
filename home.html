@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>BERA MD SESSION SITE</title>
+  <title>Bera md session</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -16,6 +16,7 @@
       overflow: hidden;
     }
 
+    /* Background video styling */
     video {
       position: fixed;
       top: 0;
@@ -23,24 +24,28 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: -1;
+      z-index: -1; /* Place the video behind content */
     }
 
     .btn {
+      --color: white;
+      --color2: #0E0E0E;
       width: 260px;
-      padding: 1em 2em;
-      background-color: white; /* White button */
-      border: none;
+      padding: 0.8em 1.75em;
+      background-color: transparent;
+      border-radius: 50px;
+      border: 3px solid transparent;
       position: relative;
+      overflow: hidden;
       cursor: pointer;
-      font-weight: 600;
+      z-index: 1;
+      font-weight: 300;
       font-size: 17px;
       font-family: 'Roboto', 'Segoe UI', sans-serif;
       text-transform: uppercase;
-      color: black; /* Black text */
+      color: var(--color);
       margin-bottom: 24px;
-      border-radius: 25px; /* Rounded shape */
-      transition: all 0.4s ease;
+      transition: 0.5s;
     }
 
     .btn::before {
@@ -50,39 +55,37 @@
       left: -3px;
       right: -3px;
       bottom: -3px;
-      border-radius: 30px;
-      background: linear-gradient(
-        45deg,
-        #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5,
-        #002bff, #7a00ff, #ff00c8, #ff0000
-      );
+      background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #00ffff);
       background-size: 400%;
-      animation: neon-border 60s linear infinite; /* Slow color transition */
       z-index: -1;
-    }
-
-    @keyframes neon-border {
-      0% { background-position: 0 0; }
-      100% { background-position: 400% 0; }
+      border-radius: 50px; /* Ensures rounded corners match the button */
+      animation: neon-border 4s linear infinite;
     }
 
     .btn:hover {
-      background-color: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+      color: black;
     }
 
     .btn:active {
+      filter: brightness(0.7);
       transform: scale(0.98);
+    }
+
+    @keyframes neon-border {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
   </style>
 </head>
 <body>
+  <!-- Background video -->
   <video autoplay loop muted>
     <source src="https://files.catbox.moe/05t1pj.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <button onclick="window.open(`/pair`)" class="btn">Pair</button>
+<button onclick="window.open(`/pair`)" class="btn">Pair</button>
   <button onclick="window.open('https://deploy-fld5.vercel.app/')" class="btn">Bot Features</button>
   <button onclick="window.open(`https://github.com/Berabruce/BERA-MD/fork`)" class="btn">BERA MD</button>
   <button onclick="window.open(`https://github.com/Berabruce/TREX-MD/fork`)" class="btn">TREX MD</button>
